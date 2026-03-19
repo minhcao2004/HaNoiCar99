@@ -1,0 +1,218 @@
+/* src/App.css */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f4f7fc;
+  color: #333;
+}
+
+/* Navigation */
+nav {
+  background: #ffffff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  padding: 1rem 2rem;
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #eaeef2;
+}
+
+nav a {
+  text-decoration: none;
+  color: #2c3e50;
+  font-weight: 600;
+  padding: 0.5rem 0;
+  border-bottom: 3px solid transparent;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+nav a:hover {
+  color: #3498db;
+  border-bottom-color: #3498db;
+}
+
+/* Container chính */
+.container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 2rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #1e2b37;
+  margin-bottom: 1.5rem;
+  border-left: 5px solid #3498db;
+  padding-left: 1rem;
+}
+
+/* Form */
+form {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.02);
+  margin-bottom: 2.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: flex-end;
+  border: 1px solid #e9ecef;
+}
+
+form input,
+form select {
+  flex: 1 1 200px;
+  padding: 0.75rem 1rem;
+  border: 1px solid #dde2e6;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: #fafbfc;
+  transition: border 0.2s, box-shadow 0.2s;
+}
+
+form input:focus,
+form select:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+}
+
+form button {
+  background: #3498db;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.8rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+  box-shadow: 0 2px 5px rgba(52, 152, 219, 0.2);
+}
+
+form button:hover {
+  background: #2980b9;
+}
+
+form button[type="button"] {
+  background: #95a5a6;
+  box-shadow: none;
+}
+
+form button[type="button"]:hover {
+  background: #7f8c8d;
+}
+
+/* Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.02);
+  border: 1px solid #e9ecef;
+}
+
+thead {
+  background: #f8fafd;
+  border-bottom: 2px solid #e9ecef;
+}
+
+th {
+  text-align: left;
+  padding: 1rem 1.2rem;
+  font-weight: 600;
+  color: #2c3e50;
+  font-size: 0.95rem;
+  letter-spacing: 0.3px;
+}
+
+td {
+  padding: 1rem 1.2rem;
+  border-bottom: 1px solid #f0f3f7;
+  color: #2c3e50;
+}
+
+tbody tr:hover {
+  background: #f8fafd;
+  transition: background 0.15s;
+}
+
+tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Status badge (tùy chọn nếu muốn thêm) */
+.status-badge {
+  display: inline-block;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  background: #ecf0f1;
+  color: #2c3e50;
+}
+
+/* Nút trong bảng */
+td button {
+  background: #3498db;
+  color: white;
+  border: none;
+  padding: 0.4rem 1rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin-right: 0.5rem;
+}
+
+td button:hover {
+  background: #2980b9;
+}
+
+td select {
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  border: 1px solid #dde2e6;
+  background: white;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+  form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  form input,
+  form select,
+  form button {
+    width: 100%;
+  }
+
+  nav {
+    justify-content: center;
+  }
+
+  .container {
+    padding: 0 1rem;
+  }
+
+  table {
+    display: block;
+    overflow-x: auto;
+  }
+}
